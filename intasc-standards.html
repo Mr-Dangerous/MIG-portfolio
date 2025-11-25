@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="InTASC Standards Portfolio - Maria Garcia Iglesias">
+  <title>INTASC Standards - MARIA GARCIA IGLESIAS</title>
+
+  <!-- Preconnect to font providers for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400&family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Link to shared CSS file -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .standards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-2xl);
+    }
+
+    @media (min-width: 767px) {
+      .standards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .standard-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-light);
+      border-radius: 8px;
+      padding: var(--spacing-xl);
+      transition: all var(--transition-normal);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .standard-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      border-color: var(--color-accent-blue);
+    }
+
+    .standard-card h3 {
+      font-size: var(--font-size-h3);
+      margin-bottom: var(--spacing-md);
+      color: var(--color-accent-blue);
+    }
+
+    .standard-card p {
+      margin-bottom: var(--spacing-md);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .standard-card a {
+      display: inline-block;
+      color: var(--color-accent-blue);
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color var(--transition-fast);
+    }
+
+    .standard-card a:hover {
+      border-bottom-color: var(--color-accent-blue);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="header" role="banner">
+    <div class="header__container">
+      <div class="logo">
+        <a href="index.html" aria-label="Maria Garcia Iglesias - Home">
+          MARIA GARCIA IGLESIAS
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+        <svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g fill="currentColor" fill-rule="evenodd">
+            <path d="M20.308 2.256H1.128C.505 2.256 0 1.75 0 1.128 0 .505.505 0 1.128 0h19.18c.623 0 1.128.505 1.128 1.128 0 .623-.505 1.128-1.128 1.128zM20.308 8.462H1.128C.505 8.462 0 7.956 0 7.332c0-.622.505-1.127 1.128-1.127h19.18c.623 0 1.128.505 1.128 1.128 0 .623-.505 1.13-1.128 1.13zM20.308 14.667H1.128c-.623 0-1.128-.505-1.128-1.13 0-.622.505-1.127 1.128-1.127h19.18c.623 0 1.128.505 1.128 1.128 0 .624-.505 1.13-1.128 1.13z"></path>
+          </g>
+        </svg>
+      </button>
+
+      <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <button class="nav__close" aria-label="Close navigation menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12.376 10l7.13-7.13c.656-.657.656-1.72 0-2.378-.656-.656-1.72-.656-2.377 0L10 7.622 2.87.493C2.212-.164 1.15-.164.49.492c-.656.657-.656 1.72 0 2.377L7.622 10l-7.13 7.13c-.656.656-.656 1.72 0 2.376.657.656 1.72.656 2.377 0l7.13-7.13 7.13 7.13c.656.656 1.72.656 2.376 0 .656-.656.656-1.72 0-2.377L12.376 10z" fill="currentColor" fill-rule="evenodd"></path>
+          </svg>
+        </button>
+
+        <ul class="nav__menu">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="about-me.html" class="nav__link">About Me</a>
+          </li>
+          <li class="nav__item">
+            <a href="intasc-standards.html" class="nav__link" aria-current="page">INTASC Standards</a>
+          </li>
+          <li class="nav__item">
+            <a href="reflections.html" class="nav__link">Reflections</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero" role="banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('uploads/1/5/2/0/152041184/background-images/93103992.jpg');">
+    <div class="hero__content">
+      <h1 class="hero__title">InTASC Standards</h1>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main id="main-content" class="main">
+    <section class="section">
+      <div class="container">
+        <div style="max-width: 900px; margin: 0 auto; margin-bottom: var(--spacing-2xl);">
+          <p style="font-size: var(--font-size-body); line-height: var(--line-height-relaxed);">
+            The InTASC (Interstate Teacher Assessment and Support Consortium) Standards represent a comprehensive framework for effective teaching. This portfolio demonstrates my understanding and application of these ten essential standards through artifacts, reflections, and evidence from my teaching practice.
+          </p>
+        </div>
+
+        <div class="standards-grid">
+          <article class="standard-card">
+            <h3>Standard 1: Learner Development</h3>
+            <p>The teacher understands how learners grow and develop, recognizing that patterns of learning and development vary individually within and across cognitive, linguistic, social, emotional, and physical areas.</p>
+            <a href="standard-1.html">View Standard 1</a>
+          </article>
+
+          <article class="standard-card">
+            <h3>Standard 2: Learning Differences</h3>
+            <p>The teacher uses understanding of individual differences and diverse cultures and communities to ensure inclusive learning environments that enable each learner to meet high standards.</p>
+            <a href="standard-2.html">View Standard 2</a>
+          </article>
+
+          <article class="standard-card">
+            <h3>Standard 3: Learning Environments</h3>
+            <p>The teacher works with others to create environments that support individual and collaborative learning, and that encourage positive social interaction, active engagement in learning, and self motivation.</p>
+            <a href="standard-3.html">View Standard 3</a>
+          </article>
+
+          <article class="standard-card">
+            <h3>Standard 4: Content Knowledge</h3>
+            <p>The teacher understands the central concepts, tools of inquiry, and structures of the discipline(s) he or she teaches and creates learning experiences that make these aspects of the discipline accessible and meaningful for learners.</p>
+            <a href="standard-4.html">View Standard 4</a>
+          </article>
+
+          <article class="standard-card">
+            <h3>Standard 5: Application of Content</h3>
+            <p>The teacher understands how to connect concepts and use differing perspectives to engage learners in critical thinking, creativity, and collaborative problem solving related to authentic local and global issues.</p>
+            <a href="standard-5.html">View Standard 5</a>
+          </article>
+
+          <article class="standard-card">
+            <h3>Standard 6: Assessment</h3>
+            <p>The teacher understands and uses multiple methods of assessment to engage learners in their own growth, to monitor learner progress, and to guide the teacher's and learner's decision making.</p>
+            <a href="standard-6.html">View Standard 6</a>
+          </article>
+
+          <article class="standard-card">
+            <h3>Standard 7: Planning for Instruction</h3>
+            <p>The teacher plans instruction that supports every student in meeting rigorous learning goals by drawing upon knowledge of content areas, curriculum, cross-disciplinary skills, and pedagogy.</p>
+            <a href="standard-7.html">View Standard 7</a>
+          </article>
+
+          <article class="standard-card">
+            <h3>Standard 8: Instructional Strategies</h3>
+            <p>The teacher understands and uses a variety of instructional strategies to encourage learners to develop deep understanding of content areas and their connections, and to build skills to apply knowledge in meaningful ways.</p>
+            <a href="standard-8.html">View Standard 8</a>
+          </article>
+
+          <article class="standard-card">
+            <h3>Standard 9: Professional Learning and Ethical Practice</h3>
+            <p>The teacher engages in ongoing professional learning and uses evidence to continually evaluate his/her practice, particularly the effects of his/her choices and actions on others.</p>
+            <a href="standard-9.html">View Standard 9</a>
+          </article>
+
+          <article class="standard-card">
+            <h3>Standard 10: Leadership and Collaboration</h3>
+            <p>The teacher seeks appropriate leadership roles and opportunities to take responsibility for student learning, to collaborate with learners, families, colleagues, and other school professionals.</p>
+            <a href="standard-10.html">View Standard 10</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__text">
+          &copy; 2025 Maria Garcia Iglesias. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Navigation Toggle Script -->
+  <script>
+    // Mobile Navigation Toggle
+    (function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navClose = document.querySelector('.nav__close');
+      const nav = document.querySelector('.nav');
+      const navLinks = document.querySelectorAll('.nav__link');
+
+      function openNav() {
+        nav.classList.add('is-open');
+        navToggle.setAttribute('aria-expanded', 'true');
+        navClose.focus();
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeNav() {
+        nav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.focus();
+        document.body.style.overflow = '';
+      }
+
+      if (navToggle) {
+        navToggle.addEventListener('click', openNav);
+      }
+
+      if (navClose) {
+        navClose.addEventListener('click', closeNav);
+      }
+
+      // Close nav when clicking a link
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 1024) {
+            closeNav();
+          }
+        });
+      });
+
+      // Close nav on ESC key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+          closeNav();
+        }
+      });
+
+      // Handle window resize
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          if (window.innerWidth >= 1024) {
+            nav.classList.remove('is-open');
+            document.body.style.overflow = '';
+          }
+        }, 250);
+      });
+    })();
+  </script>
+</body>
+</html>

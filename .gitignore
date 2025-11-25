@@ -1,0 +1,19 @@
+# Claude Code configuration
+.claude/
+
+# Temporary/downloaded files
+downloaded_pages/
+index_files/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

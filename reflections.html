@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional Reflections - Maria Garcia Iglesias">
+  <meta name="description" content="Professional Reflections - Maria Garcia Iglesias Portfolio">
   <title>Reflections - MARIA GARCIA IGLESIAS</title>
 
   <!-- Preconnect to font providers for performance -->
@@ -15,15 +15,15 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    .reflections-grid {
+    .reflection-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: var(--spacing-lg);
+      gap: var(--spacing-xl);
       margin-top: var(--spacing-2xl);
     }
 
     @media (min-width: 767px) {
-      .reflections-grid {
+      .reflection-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -32,40 +32,80 @@
       background: var(--color-white);
       border: 1px solid var(--color-gray-light);
       border-radius: 8px;
-      padding: var(--spacing-xl);
-      transition: all var(--transition-normal);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+      display: flex;
+      flex-direction: column;
     }
 
     .reflection-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      border-color: var(--color-accent-blue);
     }
 
-    .reflection-card h3 {
+    .reflection-card__image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: var(--color-gray-lightest);
+    }
+
+    .reflection-card__content {
+      padding: var(--spacing-lg);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .reflection-card__title {
+      color: var(--color-accent-blue);
       font-size: var(--font-size-h3);
-      margin-bottom: var(--spacing-md);
-      color: var(--color-accent-blue);
+      margin-bottom: var(--spacing-sm);
+      font-family: var(--font-accent);
     }
 
-    .reflection-card p {
+    .reflection-card__meta {
+      font-size: var(--font-size-small);
+      color: var(--color-gray-medium);
       margin-bottom: var(--spacing-md);
+      font-style: italic;
+    }
+
+    .reflection-card__description {
+      color: var(--color-primary-gray);
       line-height: var(--line-height-relaxed);
+      margin-bottom: var(--spacing-lg);
+      flex: 1;
     }
 
-    .reflection-card a {
+    .reflection-card__link {
       display: inline-block;
-      color: var(--color-accent-blue);
-      font-weight: 700;
+      padding: var(--spacing-sm) var(--spacing-lg);
+      background: var(--color-accent-blue);
+      color: var(--color-white);
+      border-radius: 4px;
       text-decoration: none;
-      border-bottom: 2px solid transparent;
-      transition: border-color var(--transition-fast);
+      font-weight: 700;
+      transition: opacity var(--transition-fast);
+      text-align: center;
     }
 
-    .reflection-card a:hover {
-      border-bottom-color: var(--color-accent-blue);
-      opacity: 1;
+    .reflection-card__link:hover {
+      opacity: 0.8;
+    }
+
+    .reflection-card__link--disabled {
+      background: var(--color-gray-medium);
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    .intro-text {
+      background: var(--color-gray-lightest);
+      padding: var(--spacing-xl);
+      border-radius: 8px;
+      border-left: 4px solid var(--color-accent-blue);
+      margin-bottom: var(--spacing-2xl);
     }
   </style>
 </head>
@@ -116,9 +156,10 @@
   </header>
 
   <!-- Hero Banner -->
-  <section class="hero" role="banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/classroom_1.jpg');">
+  <section class="hero" role="banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/reflection_lazarotel.png');">
     <div class="hero__content">
-      <h1 class="hero__title">Reflections</h1>
+      <h1 class="hero__title">Professional Reflections</h1>
+      <p class="hero__subtitle">MATL Program Journey</p>
     </div>
   </section>
 
@@ -126,30 +167,53 @@
   <main id="main-content" class="main">
     <section class="section">
       <div class="container">
-        <div style="max-width: 900px; margin: 0 auto; margin-bottom: var(--spacing-2xl);">
-          <p style="font-size: var(--font-size-body); line-height: var(--line-height-relaxed);">
-            Throughout my journey in the Master of Arts in the Teaching of Languages (MATL) program, I have engaged in deep reflection on my teaching practice, research, and professional growth. These reflections capture key insights and learning experiences that have shaped my development as a language educator.
-          </p>
-        </div>
+        <div style="max-width: 1200px; margin: 0 auto;">
+          <div class="intro-text">
+            <p style="font-size: var(--font-size-body); line-height: var(--line-height-relaxed);">
+              These reflections document my journey through the Master of Arts in Teaching Languages (MATL) program at Montclair State University. Each reflection captures key moments of growth, learning, and professional development as I deepened my understanding of language pedagogy, cultural responsiveness, and effective teaching practices.
+            </p>
+          </div>
 
-        <div class="reflections-grid">
-          <article class="reflection-card">
-            <h3>Reflection on Classroom Action Research</h3>
-            <p>An in-depth reflection on the action research project I conducted in my classroom, examining the research process, findings, and implications for my teaching practice.</p>
-            <a href="reflection-on-action-research-project.html">Read Reflection</a>
-          </article>
+          <div class="reflection-grid">
+            <!-- Reflection 1: As Language Teacher -->
+            <div class="reflection-card">
+              <img src="assets/reflection_santiago.png" alt="Santiago de Compostela Cathedral" class="reflection-card__image">
+              <div class="reflection-card__content">
+                <h2 class="reflection-card__title">Reflection as Language Teacher</h2>
+                <p class="reflection-card__meta">WL694 Practicum in SI/FI | Fall 2025</p>
+                <p class="reflection-card__description">
+                  A comprehensive reflection on my journey as a language learner and teacher, exploring how my personal experiences as an immigrant from Spain have shaped my pedagogical philosophy and commitment to creating inclusive, culturally rich classroom environments.
+                </p>
+                <a href="reflection-as-language-teacher.html" class="reflection-card__link">Read Reflection</a>
+              </div>
+            </div>
 
-          <article class="reflection-card">
-            <h3>Reflection as Language/Learner Teacher</h3>
-            <p>A personal reflection on my dual identity as both a language teacher and a lifelong learner, exploring how this perspective shapes my approach to education.</p>
-            <a href="reflection-as-language-teacher.html">Read Reflection</a>
-          </article>
+            <!-- Reflection 2: Action Research Project -->
+            <div class="reflection-card">
+              <img src="assets/reflection_timfaya.png" alt="Timanfaya National Park, Lanzarote" class="reflection-card__image">
+              <div class="reflection-card__content">
+                <h2 class="reflection-card__title">Reflection on Action Research Project</h2>
+                <p class="reflection-card__meta">MATL Capstone Experience</p>
+                <p class="reflection-card__description">
+                  An in-depth examination of my action research project, analyzing the research process, findings, and implications for classroom practice. This reflection explores how systematic inquiry can drive instructional improvement and professional growth.
+                </p>
+                <span class="reflection-card__link reflection-card__link--disabled">Coming Soon</span>
+              </div>
+            </div>
 
-          <article class="reflection-card">
-            <h3>Reflection on the MATL</h3>
-            <p>A comprehensive reflection on my experience in the Master of Arts in the Teaching of Languages program and how it has transformed my teaching philosophy and practice.</p>
-            <a href="reflection-on-matl.html">Read Reflection</a>
-          </article>
+            <!-- Reflection 3: On MATL -->
+            <div class="reflection-card">
+              <img src="assets/reflection_isle_graciosa.png" alt="Isla Graciosa, Lanzarote" class="reflection-card__image">
+              <div class="reflection-card__content">
+                <h2 class="reflection-card__title">Reflection on the MATL Program</h2>
+                <p class="reflection-card__meta">Program Completion | Spring 2025</p>
+                <p class="reflection-card__description">
+                  A comprehensive reflection on my transformative experience in the MATL program, highlighting key courses, influential texts, and the evolution of my teaching philosophy from theory to practice.
+                </p>
+                <span class="reflection-card__link reflection-card__link--disabled">Coming Soon</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
